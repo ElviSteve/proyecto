@@ -216,6 +216,19 @@
     
             
               </li>
+              <li class="nav-item">
+
+                {{-- @can('users.index') --}}
+                      <a href="{{route('ordenes.index')}}" class="nav-link">
+                         <i class="nav-icon fas fa-chart-pie"></i>
+                        <p>
+                          Cocina
+                        </p>
+                      </a>
+                {{-- @endcan --}}
+    
+            
+              </li>
           </li>
 
         

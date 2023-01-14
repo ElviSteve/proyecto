@@ -57,3 +57,19 @@ create table detalles(iddetalle integer auto_increment,
                      foreign key(idpedido) references pedidos(idpedido),
                      foreign key(idplato) references plato(idplato)
 );
+
+create table orden(idorden integer auto_increment,
+                    fecha varchar(50),
+                    encargado varchar(60),
+                    estado tinyint,
+                    primary key(idorden)
+);
+
+create table detalleorden(iddetalle integer auto_increment,
+                      idorden integer,
+                      producto varchar(50),
+                      unidad varchar(15),
+                      cantidad int,
+                      primary key(iddetalle),
+                      foreign key(idorden) references orden(idorden)
+);

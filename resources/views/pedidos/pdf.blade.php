@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+      img.{
+        width: 35%;
+      }
+    </style>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body >
   <div align="center">
-    <img src="images/logologin.png" alt="">
+     <img src="https://10619-2.s.cdn12.com/rests/small/w550/h367/335_508052405.jpg" alt=""> 
   </div> 
     
     <h2 style="text-align: center">BOLETA DE VENTA</h2> <br>

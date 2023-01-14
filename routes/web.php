@@ -5,8 +5,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MesaController;
+use App\Http\Controllers\OrdenController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\PlatoControler;
+use App\Http\Controllers\DetalleOrdenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,3 +63,17 @@ Route::get('cancelarped',function(){
 })->name('cancelarped');
 Route::get('pdf',[PedidoController::class,'pdf'])->name('reporte.pdf');
 Route::get('pedidos/historial',[PedidoController::class,'show'])->name('pedidos.historial');
+
+// Ruta Cocina
+Route::get('ordenes/',[OrdenController::class,'index'])->name('ordenes.index');
+Route::get('create/',[OrdenController::class,'create'])->name('ordenes.create');
+Route::post('crearorden/',[OrdenController::class,'store'])->name('ordenes.grabar');
+
+Route::get('cancelaro/',function(){return redirect()->route('ordenes.index')->with('datos','Accion Cancelada.');})->name('cancelaro');
+
+Route::get('dordenes/{idorden}',[DetalleOrdenController::class,'index'])->name('ordendetalle.index');
+Route::get('dcreate/{idorden}',[DetalleOrdenController::class,'create'])->name('ordendetalle.create');
+Route::post('creardorden/{idorden}',[DetalleOrdenController::class,'store'])->name('ordendetalle.grabar');
+
+Route::get('cancelardo/',function(){return redirect()->route('ordendetalle.index',)->with('datos','Accion Cancelada.');})->name('cancelardo');
+
